@@ -1,0 +1,16 @@
+
+html,body{
+    background-color: rgb(63, 63, 63);
+}
+
+.all-container{
+    display: grid;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
+header{
+    grid-column-start: 1;
+    grid-column-end: -1;
+}
