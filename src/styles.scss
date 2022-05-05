@@ -1,16 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script+Swash+Caps&display=swap');
+$overallFont: 'Oleo Script Swash Caps', cursive;
+$background-Color: white;
+$primary-Color: lightblue;
+$secondary-Color: aliceblue;
+$first-dark: #1e1e1e;
+$second-dark: #272727;
+$third-dark: #7b7b7b;
 
 html,body{
     background-color: rgb(63, 63, 63);
+    margin: 0;
 }
 
 .all-container{
     display: grid;
     text-align: center;
-    font-size: 30px;
-    
+    font-size: 40px;
+    font-family: $overallFont;
+    align-items: center;
+    gap: 150px;
 }
 
 header{
     grid-column-start: 1;
     grid-column-end: -1;
+    padding: 10px;
+    background-color: $primary-Color;
+}
+
+button{
+    border: 1px solid black;
+    border-top: none;
+    height: 100%;
+    width: 100%;
+    font-family: $overallFont;
+    font-size: 25px;
+    background-color: $secondary-Color;
+    &:hover{
+        cursor: pointer;
+        font-size: 44px;
+    }
+}
+
+.calculator-container{
+    position: relative;
+    display: grid;
+    grid-template-rows: 125px repeat(6,100px);
+    font-size: inherit;
+    font-family: inherit;
+    background-color: $background-Color;
+    height: 610px;
+    width: 500px;
+    justify-self: center;
+    border-radius: 2%;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+#calculator-last-row{
+    background-color: $secondary-Color;
+    font-size: 35px;
+    padding-bottom: 20px;
+    &:hover{
+        cursor: pointer;
+        font-size: 40px;
+    }
+}
+
+#calculator-first-row{
+    background-color: black;
+    height: 125px;
+    
+}
+
+.calculator-row{
+    display: flex;
+    background-color: $primary-Color;
+    border: 1px solid black;
+    
 }
