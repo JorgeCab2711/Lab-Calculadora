@@ -19,7 +19,6 @@
     ],
     "rules": {
         "quotes":["error","single"],
-        "semi"  :["error","always"],
-        "indent":["error","always"]
+        
     }
 }
