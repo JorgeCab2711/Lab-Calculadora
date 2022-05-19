@@ -5,7 +5,41 @@ function App() {
   const [result, setResult] = useState('');
 
   const handleClick = (e) => {
-    setResult(result.concat(e.target.name));
+    {
+      /*Solo se permiten 9 caracteres */
+    }
+    if (result.concat(e.target.name).length > 9) {
+      alert('Only 9 characters are allowed');
+      window.location.reload();
+    } else {
+      setResult(result.concat(e.target.name));
+    }
+  };
+
+  const clear = () => {
+    setResult('');
+  };
+
+  const backspace = () => {
+    setResult(result.slice(0, -1));
+  };
+
+  const calculate = () => {
+    try {
+      var r = eval(result);
+      {
+        /*No se despliegan numeros mayores a 999999999 ni negativos */
+      }
+      if (r < 0 || r > 999999999) {
+        setResult('Error');
+        alert('Negative number');
+        window.location.reload();
+      } else {
+        setResult(eval(result).toString());
+      }
+    } catch (error) {
+      setResult('Error');
+    }
   };
 
   return (
@@ -15,7 +49,7 @@ function App() {
         <div className="calculator-container">
           {/*First row*/}
           <div id="calculator-first-row">
-            <input type="text" value={result} />
+            <input id="userInput" type="text" value={result} />
           </div>
           {/*second row*/}
           <div className="calculator-row">
@@ -70,13 +104,23 @@ function App() {
             <button name="0" onClick={handleClick}>
               0
             </button>
-            <button onClick={handleClick}>=</button>
+            <button id="clear" onClick={clear}>
+              Clear
+            </button>
+
             <button name="-" onClick={handleClick}>
               -
             </button>
           </div>
           {/*Sixth row*/}
-          <button className="calculator-last-row">Clear</button>
+          <div className="calculator-last-row">
+            <button id="result" onClick={calculate}>
+              =
+            </button>
+            <button id="backspace" onClick={backspace}>
+              Delete
+            </button>
+          </div>
         </div>
       </div>
     </>

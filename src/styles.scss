@@ -58,7 +58,22 @@ button{
     border: 2px solid black;
 }
 
+#userInput{
+    position: relative;
+    top: 10px;
+    height: 6vh;
+    width: 15vw;
+    font-size: 35px;
+    text-align: right;
+    font-family: $overallFont;
+    border-radius: 30px;
+    border: 1px solid $first-dark;
+    padding: 10px;
+}
+
 .calculator-last-row{
+    display: grid;
+    grid-template-columns:75% 25%;
     background-color: $secondary-Color;
     font-size: 35px;
     padding-bottom: 20px;
