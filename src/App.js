@@ -51,62 +51,62 @@ function App() {
           </div>
           {/*second row*/}
           <div className="calculator-row">
-            <button name="7" onClick={handleClick}>
+            <button id="seven" name="7" onClick={handleClick}>
               7
             </button>
-            <button name="8" onClick={handleClick}>
+            <button id="eight" name="8" onClick={handleClick}>
               8
             </button>
-            <button name="9" onClick={handleClick}>
+            <button id="nine" name="9" onClick={handleClick}>
               9
             </button>
-            <button name="/" onClick={handleClick}>
+            <button id="division" name="/" onClick={handleClick}>
               ÷
             </button>
           </div>
           {/*Third row*/}
           <div className="calculator-row">
-            <button name="4" onClick={handleClick}>
+            <button name="4" id="four" onClick={handleClick}>
               4
             </button>
-            <button name="5" onClick={handleClick}>
+            <button name="5" id="five" onClick={handleClick}>
               5
             </button>
-            <button name="6" onClick={handleClick}>
+            <button name="6" id="six" onClick={handleClick}>
               6
             </button>
-            <button name="*" onClick={handleClick}>
+            <button name="*" id="mult" onClick={handleClick}>
               *
             </button>
           </div>
           {/*Fourth row*/}
           <div className="calculator-row">
-            <button name="1" onClick={handleClick}>
+            <button name="1" id="one" onClick={handleClick}>
               1
             </button>
-            <button name="2" onClick={handleClick}>
+            <button name="2" id="two" onClick={handleClick}>
               2
             </button>
-            <button name="3" onClick={handleClick}>
+            <button name="3" id="three" onClick={handleClick}>
               3
             </button>
-            <button name="+" onClick={handleClick}>
+            <button name="+" id="plus" onClick={handleClick}>
               +
             </button>
           </div>
           {/*Fifth row*/}
           <div className="calculator-row">
-            <button name="." onClick={handleClick}>
+            <button name="." id="dot" onClick={handleClick}>
               .
             </button>
-            <button name="0" onClick={handleClick}>
+            <button name="0" id="cero" onClick={handleClick}>
               0
             </button>
             <button id="clear" onClick={clear}>
               Clear
             </button>
 
-            <button name="-" onClick={handleClick}>
+            <button name="-" id="sub" onClick={handleClick}>
               -
             </button>
           </div>

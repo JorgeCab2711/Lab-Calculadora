@@ -1,6 +1,23 @@
-const App = require('./App.js');
+import React from 'react';
+import { render, fireEvent, cleanup } from '@testing-library/react';
+import App from './App';
+import '@testing-library/jest-dom';
 
-test('Tests handleClick', () => {
-  const result = App.clear('12345678');
-  expect(result).toBe('');
+describe('calculator working', () => {
+  test('Operations working', () => {
+    const dom = render(<App />);
+
+    const num1 = dom.container.querySelector('seven');
+    const suma = dom.container.querySelector('plus');
+    const num2 = dom.container.querySelector('three');
+    const equal = dom.container.querySelector('result');
+
+    fireEvent.click(num1);
+    fireEvent.click(suma);
+    fireEvent.click(num2);
+    fireEvent.click(equal);
+
+    const pantalla = dom.container.querySelector('#userInput').innerHTML;
+    expect(pantalla).toBe('10');
+  });
 });
