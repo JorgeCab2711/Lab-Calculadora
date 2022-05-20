@@ -5,7 +5,8 @@
     },
     "extends": [
         "plugin:react/recommended",
-        "airbnb"
+        "airbnb",
+        "standard"
     ],
     "parserOptions": {
         "ecmaFeatures": {
@@ -19,6 +20,8 @@
     ],
     "rules": {
         "quotes":["error","single"],
+        "semi":[2,"never"]
         
     }
+     
 }

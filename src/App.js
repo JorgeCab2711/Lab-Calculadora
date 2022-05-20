@@ -1,30 +1,28 @@
 import React, { useState } from 'react';
-import './styles.scss';
 
 function App() {
   const [result, setResult] = useState('');
 
-  const handleClick = (e) => {
+  function handleClick(e) {
     {
       /*Solo se permiten 9 caracteres */
     }
     if (result.concat(e.target.name).length > 9) {
-      alert('Only 9 characters are allowed');
-      window.location.reload();
+      setResult('Error');
     } else {
       setResult(result.concat(e.target.name));
     }
-  };
+  }
 
-  const clear = () => {
+  function clear() {
     setResult('');
-  };
+  }
 
-  const backspace = () => {
+  function backspace() {
     setResult(result.slice(0, -1));
-  };
+  }
 
-  const calculate = () => {
+  function calculate() {
     try {
       var r = eval(result);
       {
@@ -40,7 +38,7 @@ function App() {
     } catch (error) {
       setResult('Error');
     }
-  };
+  }
 
   return (
     <>
