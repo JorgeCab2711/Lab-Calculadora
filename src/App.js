@@ -115,7 +115,7 @@ function App() {
             <button id="result" onClick={calculate}>
               =
             </button>
-            <button id="backspace" onClick={backspace}>
+            <button id="backspace" value="Delete" onClick={backspace}>
               Delete
             </button>
           </div>
