@@ -22,9 +22,10 @@ function App() {
     setResult(result.slice(0, -1));
   }
 
-  function calculate() {
+  function calculate(x) {
     try {
-      var r = eval(result);
+      x = result;
+      var r = eval(x);
       {
         /*No se despliegan numeros mayores a 999999999 ni negativos */
       }
@@ -112,10 +113,10 @@ function App() {
           </div>
           {/*Sixth row*/}
           <div className="calculator-last-row">
-            <button id="result" onClick={calculate}>
+            <button id="result" value={result} onClick={calculate}>
               =
             </button>
-            <button id="backspace" value="Delete" onClick={backspace}>
+            <button id="backspace" onClick={backspace}>
               Delete
             </button>
           </div>
