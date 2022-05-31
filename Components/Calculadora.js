@@ -46,76 +46,76 @@ export default function Calculator() {
         <header>Calculadora</header>
         <div className="calculator-container">
           {/*First row*/}
-          <div data-testid="calculator-first-row">
-            <input data-testid="userInput" type="text" value={result} />
+          <div id="calculator-first-row">
+            <input id="userInput" type="text" value={result} />
           </div>
           {/*second row*/}
           <div className="calculator-row">
-            <button data-testid="seven" name="7" onClick={handleClick}>
+            <button id="seven" name="7" onClick={handleClick}>
               7
             </button>
-            <button data-testid="eight" name="8" onClick={handleClick}>
+            <button id="eight" name="8" onClick={handleClick}>
               8
             </button>
-            <button data-testid="nine" name="9" onClick={handleClick}>
+            <button id="nine" name="9" onClick={handleClick}>
               9
             </button>
-            <button data-testid="division" name="/" onClick={handleClick}>
+            <button id="division" name="/" onClick={handleClick}>
               ÷
             </button>
           </div>
           {/*Third row*/}
           <div className="calculator-row">
-            <button name="4" data-testid="four" onClick={handleClick}>
+            <button name="4" id="four" onClick={handleClick}>
               4
             </button>
-            <button name="5" data-testid="five" onClick={handleClick}>
+            <button name="5" id="five" onClick={handleClick}>
               5
             </button>
-            <button name="6" data-testid="six" onClick={handleClick}>
+            <button name="6" id="six" onClick={handleClick}>
               6
             </button>
-            <button name="*" data-testid="mult" onClick={handleClick}>
+            <button name="*" id="mult" onClick={handleClick}>
               *
             </button>
           </div>
           {/*Fourth row*/}
           <div className="calculator-row">
-            <button name="1" data-testid="one" onClick={handleClick}>
+            <button name="1" id="one" onClick={handleClick}>
               1
             </button>
-            <button name="2" data-testid="two" onClick={handleClick}>
+            <button name="2" id="two" onClick={handleClick}>
               2
             </button>
-            <button name="3" data-testid="three" onClick={handleClick}>
+            <button name="3" id="three" onClick={handleClick}>
               3
             </button>
-            <button name="+" data-testid="plus" onClick={handleClick}>
+            <button name="+" id="plus" onClick={handleClick}>
               +
             </button>
           </div>
           {/*Fifth row*/}
           <div className="calculator-row">
-            <button name="." data-testid="dot" onClick={handleClick}>
+            <button name="." id="dot" onClick={handleClick}>
               .
             </button>
-            <button name="0" data-testid="cero" onClick={handleClick}>
+            <button name="0" id="cero" onClick={handleClick}>
               0
             </button>
-            <button data-testid="clear" onClick={clear}>
+            <button id="clear" onClick={clear}>
               Clear
             </button>
 
-            <button name="-" data-testid="sub" onClick={handleClick}>
+            <button name="-" id="sub" onClick={handleClick}>
               -
             </button>
           </div>
           {/*Sixth row*/}
           <div className="calculator-last-row">
-            <button data-testid="result" value={result} onClick={calculate}>
+            <button id="result" value={result} onClick={calculate}>
               =
             </button>
-            <button data-testid="backspace" onClick={backspace}>
+            <button id="backspace" onClick={backspace}>
               Delete
             </button>
           </div>
